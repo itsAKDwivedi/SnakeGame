@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Snake Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <script src="https://kit.fontawesome.com/91668f28fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    
+
+
+
+    <h1>Hungry Snake</h1>
+    <p>Can you help him eat ?</p>
+    <div class="container">
+        <div id="board" tabindex="0">
+            <div class="banner"><p>Press any key to start game !</p><p>Tip : Score is directly proportional to speed.</p></div>
+        </div>
+        <div id="infoBoard">
+            <div class="scoreBoard">    
+                <p class="label">Current Score: <span id="currentScore">0</span></p>
+                <p class="label">Highest Score: <span id="highestScore">0</span></p>
+            </div>
+            <div class="buttonContainer">
+                <div id="pause"><input type="button" id="pauseButton" value="Play"> </div>
+                <div id="soundDiv"><i class="muteButton fa-solid fa-volume-low"></i></div>
+            </div>
+            <div id="speed">
+                <p class="label">Speed: </p>
+                <input type="range" min="2" max="30" value="4" class="slider" id="level" step="0.1" onkeydown="return false;" oninput="document.querySelector('#speedValue').innerHTML = this.value" />
+                <label id="speedValue">4</label>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+
+    <!--Falling-items-->
+
+    <div class="snowflakes">
+        <!-- add your 'snowflake' images below - you can add more or less if needed -->
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+        <div class="snowflake"><img src="https://cinni.net/images/favi/p/poke_61.gif" style="width:20px;" /></div>
+    </div>
+    
+
+
+
+</html>
