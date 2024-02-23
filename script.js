@@ -128,6 +128,75 @@ function boardLogic(){
         else
             snakeBody.pop();
     }
+
+
+    else if(snakeBody[0].x + inputDirection.x === 31){
+        snakeBody.unshift({x: 1 , y: snakeBody[0].y + inputDirection.y});
+        
+        //successful eat
+        if(snakeBody[0].x === foodBlock.x && snakeBody[0].y === foodBlock.y){
+            generateRandom();
+            updateScore();
+            if(muteStatus===0){
+                eatSound.play();
+            }
+        }
+        else
+            snakeBody.pop();
+    }
+
+
+
+    else if(snakeBody[0].y + inputDirection.y === 21){
+        snakeBody.unshift({x: snakeBody[0].x + inputDirection.x , y: 1});
+        
+        //successful eat
+        if(snakeBody[0].x === foodBlock.x && snakeBody[0].y === foodBlock.y){
+            generateRandom();
+            updateScore();
+            if(muteStatus===0){
+                eatSound.play();
+            }
+        }
+        else
+            snakeBody.pop();
+    }    
+
+
+    else if(snakeBody[0].x + inputDirection.x === 0){
+        snakeBody.unshift({x: 30 , y: snakeBody[0].y + inputDirection.y});
+        
+        //successful eat
+        if(snakeBody[0].x === foodBlock.x && snakeBody[0].y === foodBlock.y){
+            generateRandom();
+            updateScore();
+            if(muteStatus===0){
+                eatSound.play();
+            }
+        }
+        else
+            snakeBody.pop();
+    }
+
+
+
+    else if(snakeBody[0].y + inputDirection.y === 0){
+        snakeBody.unshift({x: snakeBody[0].x + inputDirection.x , y: 20});
+        
+        //successful eat
+        if(snakeBody[0].x === foodBlock.x && snakeBody[0].y === foodBlock.y){
+            generateRandom();
+            updateScore();
+            if(muteStatus===0){
+                eatSound.play();
+            }
+        }
+        else
+            snakeBody.pop();
+    }
+
+
+
     else{
         gameOver();
         return;
