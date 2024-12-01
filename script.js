@@ -2,10 +2,12 @@
 let inputDirection = {x: 0, y: 0};
 let currentDirection = {x: 0, y: 0};
 let snakeBody = [
-    {x: 11, y: 15},
-    {x: 12, y: 15},
-    {x: 13, y: 15}  
-];
+        {x: 11, y: 15},
+        {x: 12, y: 15},
+        {x: 13, y: 15},
+        {x: 14, y: 15}, 
+        {x: 15, y: 15}
+    ];
 let foodBlock = {x: 9, y:7};
 let gameStatus = 0;
 let speed = 4
@@ -243,7 +245,11 @@ function gameOver(){
     currentScore = 0;
     document.querySelector("#currentScore").innerText = currentScore;
     snakeBody = [
-        {x: 13, y: 15}  
+        {x: 11, y: 15},
+        {x: 12, y: 15},
+        {x: 13, y: 15},
+        {x: 14, y: 15}, 
+        {x: 15, y: 15}
     ];
     gameStatus=0;
 }
