@@ -2,6 +2,8 @@
 let inputDirection = {x: 0, y: 0};
 let currentDirection = {x: 0, y: 0};
 let snakeBody = [
+    {x: 11, y: 15},
+    {x: 12, y: 15},
     {x: 13, y: 15}  
 ];
 let foodBlock = {x: 9, y:7};
